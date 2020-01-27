@@ -1,0 +1,668 @@
+/* COLOURS
+#E7A8E6 - accent pink
+#1F2022 - dark grey
+#D8D8D8 - grey
+#F0F5FF - light grey
+#FCFCFC - white
+*/
+
+
+/* SETUP */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* BASE STYLES */
+html {
+    font-size: 62.5%; /* 10px  */
+}
+body {
+    font-size: 1.8rem;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    color: #1F2022;
+    background-color: #FCFCFC;
+}
+
+
+/* STRIPPING STYLES */
+body, 
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* 0. TYPOGRAPHY AND SHARED STYLES */
+h1,
+h3,
+h4,
+.logo {
+    font-family: "Playfair Display", serif;
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+    line-height: 6.3rem;
+    font-weight: 400;
+}
+h3 {
+    font-size: 4rem;
+    margin-bottom: 5px;
+}
+h4 {
+    font-size: 3rem;
+}
+h5 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+section {
+    padding: 100px 0;
+}
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo {
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.pink-button {
+    padding: 10px 30px;
+    background-color: #E7A8E6;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+    .pink-button:hover,
+    .pink-button:focus,
+    .pink-button:active {
+        color: #E7A8E6;
+        background-color: black ;
+    }
+.copy {
+    line-height: 3rem;
+    margin: 30px 0;
+}
+
+nav li {
+    transition: all 0.4s ease-out;
+}
+    nav li:hover,
+    nav li:focus,
+    nav li:active {
+        color: #E7A8E6;
+    }
+/* applied to header menu when user clicks on hamburger icon on mobile */
+
+
+    /* MEDIA QUERIES */
+    /* (NOTE: I write my media queries after each section because I find it more readable and manageable than having them at the end of the file */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+        section {
+            padding: 80px 0;
+        }
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        .wrapper {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+
+    }
+/* 0. End of TYPOGRAPHY AND SHARED STYLES */
+
+
+/* 1. HEADER */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    color: white;
+    z-index: 10;
+    padding-top: 25px;
+}
+header .logo {
+    float: left;
+}
+/* Header Nav */
+.header-nav {
+    float: right;
+}
+.header-nav li {
+    display: inline-block;
+}
+.header-nav a {
+    padding: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+    .header-nav a:hover,
+    .header-nav a:focus,
+    .header-nav a:active {
+        background-color: #E7A8E6;
+        color: black;
+    }
+.hamburger {
+        display: none;
+        color: white; 
+        background-color: transparent;
+        font-size: 4rem;
+    }
+.close-button {
+    display: none;
+    margin: 15px auto;
+    background-color: transparent;
+    color:white;
+    font-size: 4rem;
+}
+/* Social Links */
+.social {
+    position: absolute;
+    top: 40vh;
+    right: 50px;
+    font-size: 2.5rem;
+}
+.social a {
+    display: block;
+    padding: 20px;
+}
+    .social a:hover, 
+    .social a:focus, 
+    .social a:active {
+        color: #E7A8E6;
+        transform: scale(1.2);
+    }
+
+    /* MEDIA QUIERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+    
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        
+        .header-menu {
+            display: none;
+            position: absolute;
+            background-color: #1F2022;
+            width: 100%;
+            left: 0;
+            right: 0%;
+            top: 0;
+        }
+        .header-nav {
+            text-align: center;
+            width: 100%;
+            border-bottom: 1px solid #E7A8E6;
+        }
+        .header-nav li {
+            display: block;
+            font-size: 2.5rem;
+            float: none;
+        }
+        .hamburger {
+            display: block;
+            float: right;
+        }
+        .close-button {
+            display: block;
+        }
+            .close-button:hover,
+            .close-button:focus,
+            .close-button:active {
+                color: #E7A8E6;
+            }
+        .social {
+            position: static;
+            text-align: center;
+        }
+        .social li {
+            font-size: 4rem;
+            display: inline-block;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+    
+    }
+/* 1. End of HEADER */
+
+
+/* 2. HERO */
+.hero {
+    height: 100vh;
+    background-image: url(assets/asset-1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+.hero h2 {
+    margin-top: 55vh;
+    text-transform: uppercase;
+}
+.hero .logo {
+    display: block;
+    font-size: 11rem;
+    font-weight: 700;
+}
+
+    /* MEDIA QUIERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+    
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+    
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-top: 20vh;
+        }
+        .hero .logo {
+            font-size: 9rem;
+        }
+    }
+/* 2. End of HERO */
+
+
+/* 3. ABOUT */
+.about {
+    background-color: #F0F5FF;
+    text-align: center;
+}
+.about .wrapper {
+    width: 60%;
+}
+
+    /* MEDIA QUIERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+    
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+    
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+        .about .wrapper {
+            width: 100%;
+        }
+    }
+/* 3. End of ABOUT */
+
+
+/* 4. GALLERY */
+.gallery-img {
+    width: calc((100% - 60px) / 3);
+    float: left;
+}
+.gallery-img.middle {
+    margin: 0 30px;
+}
+
+    /* MEDIA QUERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+    
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        .gallery,
+        .gallery .wrapper {
+            padding: 0;
+        }
+        .gallery-img.middle {
+            margin: 0;
+        }
+        .gallery-img {
+            width: calc(100% / 3);
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+         .gallery .gallery-img:last-of-type {
+            display: none;
+        }
+        .gallery-img {
+            width: 50%;
+        }
+    }
+/* 4. End of GALLERY */
+
+
+/* 5. MAIN NAV */
+.main-nav {
+    background-image: url(assets/asset-5.jpg);
+    background-size: cover;
+    color: white;
+    text-align: center;
+}
+.main-nav ul {
+    width: 100%;
+    margin: 0 auto;
+}
+.main-nav li {
+    display: inline-block;
+    font-size: 3.2rem;
+}
+.main-nav a {
+    position: relative;
+    font-family: "Playfair Display", serif;
+    margin: 0 30px;
+}
+.main-nav i {
+    display: block;
+    margin-bottom: 5px;
+}
+
+    /* MEDIA QUERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+        .main-nav li {
+            font-size: 2.3rem;
+        }
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        .main-nav {
+            background-image: none;
+            background-color: #1F2022;
+        }
+        .main-nav li {
+            display: block;
+            margin-bottom: 50px;
+            font-size: 3rem;
+        }
+        .main-nav li:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+    
+    }
+/* 5. End of MAIN NAV */
+
+
+/* 6. BIO */
+.bio-img {
+    float: left;
+    width: 40%;
+}
+.bio-copy {
+    float: right;
+    width: calc(60% - 35px);
+    margin-left: 35px;
+}
+
+    /* MEDIA QUERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+    
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        .bio-img,
+        .bio-copy {
+            float: none;
+            width: 100%;
+        }
+        .bio-copy {
+            margin-left: 0;
+            margin-top: 35px;     
+            text-align: center;
+        }
+        .bio-copy p {
+            text-align: justify;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+    
+    }
+/* 6. End of BIO */
+
+
+/* 7. BLOG */
+.blog {
+    background-color: #F0F5FF;
+    padding: 0;
+    width: 100%;
+}
+.blog-img,
+.blog-copy {
+    width: 50%;
+}
+.blog-copy {
+    float: left;
+    padding: 100px;
+    padding-bottom: 0;
+}
+.blog-copy.top {
+    text-align: end;
+}
+.blog-copy.bottom {
+    text-align: start;
+}
+.blog-img {
+    background-size: cover;
+    background-position: center;
+    min-height: 462px; /* height of the images */
+}   
+.blog-img.top {
+    background-image: url(assets/asset-7.jpg);
+    float: right;
+}
+.blog-img.bottom {
+    background-image: url(assets/asset-8.jpg); 
+    float: left;
+}
+
+    /* MEDIA QUERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+        .blog-copy {
+            padding: 80px;
+            padding-bottom: 0;
+        }
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+        .blog-img,
+        .blog-copy {
+            width: 100%;
+        }
+        .blog-copy.top,
+        .blog-copy.bottom {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .blog-img.top,
+        .blog-img.bottom {
+            float: none;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+    
+    }
+/* 7. End of BLOG */
+
+
+/* 8. FOOTER */
+.footer {
+    background-color: #1F2022;
+    color: white; 
+    padding: 100px 0;
+    line-height: 1.5;
+}
+.footer-contact-mobile {
+    display: none;
+}
+.footer-contact,
+.footer-form,
+.footer-nav {
+    float: left;
+}
+.footer-contact,
+.footer-nav {
+    width: 20%;
+}
+.footer-form {
+    width: calc(60% - 6%);
+    margin: 0 3%;
+    text-align: center;
+}
+.footer-form p {
+    margin: 10px;
+}
+.footer-nav {
+    text-align: end;
+    text-transform: uppercase;
+}
+.footer .email-field {
+    padding: 9px 29px;
+    float: left;
+    width: 65%;
+    border: none;
+    border: 1px solid transparent
+}
+    .footer .email-field:focus,
+    .footer .email-field:active {
+        border: 1px solid rgb(218, 68, 218);
+    }
+.footer .submit {
+    width: 35%;
+}
+.copyright {
+    background-color: #000;
+    color: #545454;
+    text-align: center;
+    padding: 10px;
+}
+
+    /* MEDIA QUERIES */
+
+    /* large tablet */
+    @media (max-width: 980px) {
+
+        .footer {
+            padding: 80px 0;
+        }
+
+        .footer-form {
+            width: 100%;
+            margin: 0;
+            margin-bottom: 25px;
+            float: none;
+            clear:both;
+        }
+        .footer .wrapper {
+            width: 100%;
+        }
+        .footer form {
+            width: 70%;
+            margin: 0 auto;
+        }
+        .footer-contact {
+            display: none;
+        }
+        .footer-nav,
+        .footer-contact-mobile {
+        width: 50%;
+        text-align: center; 
+        }
+        .footer-contact-mobile {
+            display: block;
+            float: left;
+        }
+        .footer-nav {
+            float: right;
+        }
+    }
+    /* small tablet */
+    @media (max-width: 768px) {
+
+        .footer form {
+            width: 100%;
+        }
+        .footer .email-field {
+            width: 100%;
+            text-align: center;
+        }
+        .footer .submit {
+            width: 100%;
+            margin-top: 5px;
+        }
+        .footer-contact-mobile p,
+        .footer-nav a {
+            padding: 7px 0;
+        }
+    }
+    /* mobile */
+    @media (max-width: 480px) {
+    
+    }
+/* 8. End of FOOTER */
+
+
+
+
+
+
+
